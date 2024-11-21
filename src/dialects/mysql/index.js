@@ -31,6 +31,7 @@ class MysqlDialect extends AbstractDialect {
 MysqlDialect.prototype.supports = _.merge(
   _.cloneDeep(AbstractDialect.prototype.supports),
   {
+    schema:true,
     'VALUES ()': true,
     'LIMIT ON UPDATE': true,
     lock: true,
